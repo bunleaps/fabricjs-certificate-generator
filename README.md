@@ -1,40 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Certificate Generator
 
-## Getting Started
+A React + Fabric.js web application built as a **self-learned and self-taught project**.  
+This project helped me explore front-end development, canvas manipulation, and batch processing of images — all from scratch through independent learning.
 
-First, run the development server:
+This is a simple web application that allows you to:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Upload a certificate template
+- Add a customizable name field
+- Input multiple recipient names
+- Generate individual certificate images for each name
+- Download all certificates as a ZIP file
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## ✨ Features
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- **Template Upload** – Upload any PNG/JPEG certificate background.
+- **Drag & Drop Name Field** – Position and resize the text box directly on the template.
+- **Font Customization** – Change font size and color with a live preview.
+- **Batch Processing** – Enter a list of names (one per line) to generate all certificates in one go.
+- **ZIP Download** – Automatically download all generated certificates in a single `.zip` file.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠 Tech Stack
 
-## Learn More
+- **React** – UI components
+- **Fabric.js** – Canvas rendering & object manipulation
+- **react-color** – Color picker for font customization
+- **JSZip** – Creating ZIP archives for download
+- **file-saver** – Saving ZIPs to the user's device
+- **Next.js Dynamic Imports** – For client-side only components (ChromePicker)
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+## 🖱 Usage
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Upload Template** – Click the file input and choose your certificate background image.
+- **Add Name Field** – Click "Add Name Field" to place a text box; drag and resize it as needed.
+- **Font Customize Font** – Use the font size input and color picker to style your text.
+- **Enter Names** – Add each recipient name on a new line in the text area.
+- **Generate** – Click "Generate Certificates" to download a ZIP with all images.
 
-## Deploy on Vercel
+## ⚠️ Notes
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+- For best results, use high-resolution templates to avoid blurry outputs.
+- The generated images are PNG format with transparent backgrounds outside the certificate area.
+- Name text positioning will be applied consistently for all generated certificates.
